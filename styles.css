@@ -1,0 +1,29 @@
+@import url("base.css");
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px 0 60px 0;
+}
+
+header ul {
+  display: flex;
+  gap: 20px;
+  & li {
+    color: var(--darkgrayishblue);
+    & a {
+      transition: all 0.2s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+    & a:hover {
+      color: var(--secondary);
+    }
+  }
+}
