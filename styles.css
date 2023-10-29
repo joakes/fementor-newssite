@@ -1,7 +1,7 @@
 @import url("base.css");
 
 .container {
-  max-width: 70%;
+  max-width: 75%;
   margin: 0 auto;
 }
 
@@ -28,17 +28,26 @@ header ul {
   }
 }
 
+.grid-col-span-2 {
+  grid-column: span 2;
+}
+
+.grid-row-span-2 {
+  grid-row: span 2;
+}
+
 main {
   display: grid;
   gap: 2em;
   grid-template-columns: repeat(3, 1fr);
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
 .headline-title h1 {
+  padding-right: 1em;
   font-weight: 800;
-  font-size: 3rem;
-  letter-spacing: 0.08rem;
+  font-size: 3.1rem;
+  letter-spacing: 0.15rem;
   line-height: 3.2rem;
 }
 
@@ -49,7 +58,7 @@ main {
 .headline a button {
   border: none;
   background-color: var(--secondary);
-  padding: 0.8rem 1rem;
+  padding: 0.9rem 1rem;
   width: 50%;
   text-transform: uppercase;
   color: var(--offwhite);
@@ -91,10 +100,12 @@ aside {
 
   & p {
     margin-bottom: 1.5rem;
+    color: var(--grayishblue);
   }
 }
 
 .article {
+  margin-top: 2rem;
   display: flex;
   gap: 1.3rem;
 
