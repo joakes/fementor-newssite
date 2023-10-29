@@ -1,7 +1,7 @@
 @import url("base.css");
 
 .container {
-  max-width: 80%;
+  max-width: 70%;
   margin: 0 auto;
 }
 
@@ -33,6 +33,13 @@ main {
   gap: 2em;
   grid-template-columns: repeat(3, 1fr);
   margin-bottom: 3rem;
+}
+
+.headline-title h1 {
+  font-weight: 800;
+  font-size: 3rem;
+  letter-spacing: 0.08rem;
+  line-height: 3.2rem;
 }
 
 .headline a button {
