@@ -1,23 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
 /* CSS Reset */
 
 html {
   box-sizing: border-box;
   font-size: 15px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
@@ -26,17 +38,29 @@ img {
   height: auto;
 }
 
-/* END CSS Reset */
-
-:root {
---primary: hsl(35, 77%, 62%);
---secondary: hsl(5, 85%, 63%);
---offwhite: hsl(36, 100%, 99%);
---grayishblue: hsl(233, 8%, 79%);
---darkgrayishblue: hsl(236, 13%, 42%);
---verydarkblue: hsl(240, 100%, 5%);
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
 p {
-  color: var(--darkgrayishblue)
+  line-height: 1.5rem;
+}
+
+/* END CSS Reset */
+
+:root {
+  --primary: hsl(35, 77%, 62%);
+  --secondary: hsl(5, 85%, 63%);
+  --offwhite: hsl(36, 100%, 99%);
+  --grayishblue: hsl(233, 8%, 79%);
+  --darkgrayishblue: hsl(236, 13%, 42%);
+  --verydarkblue: hsl(240, 100%, 5%);
+}
+
+p {
+  color: var(--darkgrayishblue);
 }
