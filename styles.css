@@ -15,16 +15,8 @@ header {
 header ul {
   display: flex;
   gap: 20px;
-  & li {
-    color: var(--darkgrayishblue);
-    & a {
-      transition: all 0.2s ease;
-      text-decoration: none;
-      color: inherit;
-    }
-    & a:hover {
-      color: var(--secondary);
-    }
+  & a:hover {
+    color: var(--secondary);
   }
 }
 
@@ -100,10 +92,6 @@ aside {
     &:hover {
       color: var(--primary);
     }
-  }
-
-  & a {
-    text-decoration: none;
   }
 
   & p {

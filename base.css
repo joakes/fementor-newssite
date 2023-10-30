@@ -50,6 +50,11 @@ p {
   line-height: 1.6rem;
 }
 
+a {
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
 /* END CSS Reset */
 
 :root {
@@ -61,6 +66,6 @@ p {
   --verydarkblue: hsl(240, 100%, 5%);
 }
 
-p {
+p, a {
   color: var(--darkgrayishblue);
 }
