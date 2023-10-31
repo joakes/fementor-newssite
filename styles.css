@@ -26,8 +26,9 @@ main {
   margin-bottom: 5rem;
 }
 
-main > img {
+.desktop-img-header {
   height: 100%;
+  display: none;
 }
 
 .headline-title h1 {
@@ -127,6 +128,7 @@ aside {
   .grid-row-span-2 {
     grid-row: span 2;
   }
+
   main {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -137,4 +139,14 @@ aside {
   .article {
     margin-top: 2rem;
   }
+}
+
+@media screen and (min-width: 36em) {
+    .desktop-img-header {
+        display: block;
+    }
+
+    .mobile-img-header {
+        display: none;
+    }
 }
