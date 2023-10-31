@@ -9,11 +9,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 90px 0 60px 0;
+  margin: 30px 0;
 }
 
-header ul {
-  display: flex;
+header .desktop-menu {
+  display: none;
   gap: 20px;
   & a:hover {
     color: var(--secondary);
@@ -24,6 +24,48 @@ main {
   display: grid;
   gap: 2rem;
   margin-bottom: 5rem;
+}
+
+.sidebar-popout {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100vh;
+  background-color: var(--offwhite);
+  transition: 0.5s;
+
+  & .close-container {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: var(--verydarkblue);
+  }
+}
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.mobile-menu {
+  margin-top: 7rem;
+  margin-left: 3rem;
+
+  & li {
+    margin: 2rem 0;
+    font-size: 1.2rem;
+  }
 }
 
 .desktop-img-header {
@@ -133,20 +175,36 @@ aside {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  header .desktop-menu {
+    display: flex;
+  }
+
+  header .mobile-menu-icon {
+    display: none;
+  }
+
+  .sidebar-popout {
+    display: none;
+  }
+
   .headline p {
     padding-bottom: 0;
   }
   .article {
     margin-top: 2rem;
   }
+
+  header {
+    margin: 90px 0 60px 0;
+  }
 }
 
 @media screen and (min-width: 36em) {
-    .desktop-img-header {
-        display: block;
-    }
+  .desktop-img-header {
+    display: block;
+  }
 
-    .mobile-img-header {
-        display: none;
-    }
+  .mobile-img-header {
+    display: none;
+  }
 }
