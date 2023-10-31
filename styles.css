@@ -119,7 +119,7 @@ aside {
   }
 }
 
-@media screen and (min-width: 70em) {
+@media screen and (min-width: 60em) {
   .grid-col-span-2 {
     grid-column: span 2;
     grid-row-start: auto;
