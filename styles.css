@@ -20,18 +20,9 @@ header ul {
   }
 }
 
-.grid-col-span-2 {
-  grid-column: span 2;
-}
-
-.grid-row-span-2 {
-  grid-row: span 2;
-}
-
 main {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(3, 1fr);
   margin-bottom: 5rem;
 }
 
@@ -51,6 +42,9 @@ main > img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  & p {
+    padding-bottom: 3rem;
+  }
 }
 
 .headline a button {
@@ -69,6 +63,7 @@ main > img {
 }
 
 aside {
+  grid-row-start: 4;
   background-color: var(--verydarkblue);
   padding: 1.5rem;
   & li {
@@ -100,12 +95,12 @@ aside {
 }
 
 .article {
-  margin-top: 2rem;
   display: flex;
   gap: 1.3rem;
 
   & img {
-    width: 35%;
+    height: 146px;
+    width: 115px;
   }
 
   & div {
@@ -120,5 +115,26 @@ aside {
       font-size: 1rem;
       letter-spacing: 0.04rem;
     }
+  }
+}
+
+@media screen and (min-width: 70em) {
+  .grid-col-span-2 {
+    grid-column: span 2;
+    grid-row-start: auto;
+  }
+
+  .grid-row-span-2 {
+    grid-row: span 2;
+  }
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .headline p {
+    padding-bottom: 0;
+  }
+  .article {
+    margin-top: 2rem;
   }
 }
